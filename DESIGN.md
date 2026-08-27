@@ -29,8 +29,17 @@
 
 初回のUI作業時にAIが記入し、その後は恒常的な方向性が変わった場合だけ更新する。
 
-- Product / users / primary task:
-- Desired impression:
+- Product / users / primary task: 「あといくら」。家計簿が続かなかった一人暮らしの人が、買い物の直後に片手で支出を記録し、今月あといくら使えるかを確認するWebアプリ。
+- Desired impression: 紙の家計簿の信頼感と、毎日開ける軽さ。節約を煽らず、数字を静かに判断できる実用品。
 - Reference products / what to borrow:
-- What to avoid:
+  - [くふう Zaim](https://content.zaim.net/manuals/show/28): ホームで今月の状況と直近の動きを先に見せる情報順序。小カードや通知の多さは借りない。
+  - [OsidOri 予算管理](https://support.osidori.co/hc/ja/articles/5630337447449-%E4%BA%88%E7%AE%97%E3%81%AE%E7%AE%A1%E7%90%86%E3%81%AF%E3%81%A7%E3%81%8D%E3%81%BE%E3%81%99%E3%81%8B): 予算・支出・残りを同じ視線上で比較する構造。超過を色と文言の両方で示す。
+  - [Apple HIG: Entering data](https://developer.apple.com/design/human-interface-guidelines/entering-data): 入力項目を必要最小限にし、入力ミスを減らす。
+  - [Apple HIG: Accessibility](https://developer.apple.com/design/human-interface-guidelines/accessibility): 主要操作は44px以上、状態を色だけで伝えない。
+- What to avoid: 金融機関連携を前提にした複雑さ、数字を細かなカードへ分断すること、節約を煽るコピー、円グラフの多用、常時表示する細かな設定。
 - Durable design decisions:
+  - 月の進み具合と予算消化率を同じ「ものさし」で比較することを、このプロダクトの視覚的な核にする。
+  - スマホでは残額、記録操作、直近の履歴の順。PCでは概要・分析と明細を2列に再構成する。
+  - 紙色、墨色、深い緑を基調にし、超過時だけ朱色を使う。色には必ずテキストを併記する。
+  - 罫線と余白でまとまりを作り、不必要なカード、影、過剰な角丸を使わない。
+  - 金額は桁を読みやすく、本文は日本語環境で自然なゴシック体を使う。外部フォントは読み込まない。
